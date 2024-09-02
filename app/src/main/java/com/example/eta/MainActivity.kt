@@ -71,9 +71,7 @@ class MainActivity : ComponentActivity() {
                     composable("delta") {
                         DeltaScreen(navController)
                     }
-                    composable("epsilon") {
-                        EpsilonScreen(navController)
-                    }
+
                 }
             }
         }
@@ -194,25 +192,7 @@ fun DeltaScreen(navController: NavController) {
     }
 }
 
-@Composable
-fun EpsilonScreen(navController: NavController) {
-    Column(
-        modifier = Modifier.fillMaxSize(),
-        verticalArrangement = Arrangement.Center,
-        horizontalAlignment = Alignment.CenterHorizontally
-    ) {
-        Text("네 번째 화면")
-        Button(
-            modifier = Modifier
-                .padding(vertical = 24.dp),
-            onClick = {
-                navController.navigateUp()
-            }
-        ) {
-            Text("뒤로 가기")
-        }
-    }
-}
+
 @Composable
 private fun Greeting(name: String, modifier: Modifier = Modifier) {
     Card(
